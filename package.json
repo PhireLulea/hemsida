@@ -1,0 +1,21 @@
+{
+  "name": "@example/blog",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "astro": "4.0.7"
+  },
+  "dependencies": {
+    "@astrojs/vercel": "^6.1.0",
+    "astro-decap-cms-oauth": "^0.2.9",
+    "astro-netlify-cms": "^0.5.4"
+  },
+  "packageManager": "pnpm@8.12.1"
+}
