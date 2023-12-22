@@ -1,8 +1,8 @@
 {
-  "name": "@example/blog",
+  "name": "@phirelulea/hemsida",
   "version": "0.0.1",
   "private": true,
-  "license": "MIT",
+  "license": "Apache-2.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,12 +10,13 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "4.0.7"
+    "astro": "4.0.7",
+    "decap-server": "^3.0.1",
+    "pagefind": "^1.0.4"
   },
   "dependencies": {
     "@astrojs/vercel": "^6.1.0",
-    "astro-decap-cms-oauth": "^0.2.9",
-    "astro-netlify-cms": "^0.5.4"
+    "decap-cms-app": "^3.0.12"
   },
   "packageManager": "pnpm@8.12.1"
 }

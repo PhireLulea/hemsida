@@ -1,0 +1,20 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+// Initialize the CMS object
+// Now the registry is available via the CMS object.
+// CMS.registerPreviewTemplate('my-template', MyTemplate)
+
+---
+
+<html lang={'en'}>
+	<head>
+		<BaseHead title='Decap Content Manager' description='Decap CMS admin panel' permalink='/admin' />
+	</head>
+
+	<body>
+  <script>
+    import CMS from 'decap-cms-app'
+    CMS.init()
+  </script>
+	</body>
+</html>
