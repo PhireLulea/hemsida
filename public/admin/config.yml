@@ -9,6 +9,8 @@ backend:
   branch: main # change this to your branch
   repo: PhireLulea/hemsida # change this to your repo
   site_domain: hemsida-one.vercel.app # change this to your domain
+  base_url: https://hemsida-one.vercel.app # change this to your prod URL
+  auth_endpoint: oauth # the oauth route provided by the integration
 
 media_folder: "public/assets"
 public_folder: "assets"
