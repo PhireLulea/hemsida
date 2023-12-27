@@ -1,9 +1,13 @@
 import type { Config } from "tailwindcss";
 
 export default {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}", "node_modules/preline/dist/*.js"],
+  content: [
+    "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
+    "node_modules/daisyui/dist/**/*.js",
+    "node_modules/react-daisyui/dist/**/*.js",
+  ],
   theme: {
     extend: {},
   },
-  plugins: [require("preline/plugin")],
+  plugins: [require("daisyui")],
 } satisfies Config;

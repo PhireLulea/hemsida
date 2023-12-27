@@ -1,5 +1,7 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
 
 const { title, lang } = Astro.props;
 ---
@@ -9,45 +11,17 @@ const { title, lang } = Astro.props;
     <BaseHead {title} description="test" permalink="/" />
   </head>
 
-  <body>
-    <header class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4 dark:bg-gray-800">
-      <nav class="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between" aria-label="Global">
-        <a class="flex-none text-xl font-semibold dark:text-white" href="#">Brand</a>
-        <div class="flex flex-row items-center gap-5 mt-5 sm:justify-end sm:mt-0 sm:ps-5">
-          <a
-            class="font-medium text-blue-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-            href="#"
-            aria-current="page">Landing</a
-          >
-          <a
-            class="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-            href="#">Account</a
-          >
-          <a
-            class="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-            href="#">Work</a
-          >
-          <a
-            class="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-            href="#">Blog</a
-          >
-        </div>
-      </nav>
+  <body class="bg-background-50 dark:bg-background-950">
+    <header class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-primary text-sm text-text-800 dark:text-text-100 py-4">
+      <Navbar />
     </header>
     <main id="content" role="main">
-      <button
-        type="button"
-        class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-      >
-        Solid
-      </button>
-      <header class="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm py-3 md:py-0">a</header>
       <div class="overflow-hidden">
-        <div class="container mx-auto">
+        <div class="container max-w-[85rem] mx-auto text-text-900 dark:text-text-100">
           <slot />
         </div>
       </div>
     </main>
-    <script is:inline src="./node_modules/preline/dist/preline.js"></script>
+    <Footer site:visible />
   </body>
 </html>
