@@ -1,27 +1,23 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
-import Navbar from "../components/Navbar.astro";
+import Navigation from "../components/Navigation.astro";
 
 const { title, lang } = Astro.props;
 ---
 
-<html lang={lang || "en"}>
+<html lang={lang || "en"} data-theme="phire">
   <head>
     <BaseHead {title} description="test" permalink="/" />
   </head>
-
-  <body class="bg-background-50 dark:bg-background-950">
-    <header class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-primary text-sm text-text-800 dark:text-text-100 py-4">
-      <Navbar />
-    </header>
-    <main id="content" role="main">
-      <div class="overflow-hidden">
-        <div class="container max-w-[85rem] mx-auto text-text-900 dark:text-text-100">
+  <body>
+    <Navigation>
+      <main id="content" role="main">
+        <div class="overflow-hidden">
           <slot />
         </div>
-      </div>
-    </main>
+      </main>
+    </Navigation>
     <Footer site:visible />
   </body>
 </html>

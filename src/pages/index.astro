@@ -1,27 +1,70 @@
 ---
 // Component Imports
-import BaseHead from '../components/BaseHead.astro';
-import BlogHeader from '../components/BlogHeader.astro';
-import BlogPostPreview from '../components/BlogPostPreview.astro';
-import { SITE } from '../config';
-import Layout from '../layouts/Layout.astro';
+import BaseHead from "../components/BaseHead.astro";
+import BlogHeader from "../components/BlogHeader.astro";
+import BlogPostPreview from "../components/BlogPostPreview.astro";
+import { SITE } from "../config";
+import Layout from "../layouts/Layout.astro";
 
 // Component Script:
 // You can write any JavaScript/TypeScript that you'd like here.
 // It will run during the build, but never in the browser.
 // All variables are available to use in the HTML template below.
 let { title } = SITE;
-let description = 'The perfect starter for your perfect blog.';
-let permalink = 'https://example.com/';
+let description = "The perfect starter for your perfect blog.";
+let permalink = "https://example.com/";
 
 // Data Fetching: List all Markdown posts in the repo.
 
-let allPosts = await Astro.glob('./posts/*.md');
-allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
+let allPosts = await Astro.glob("./posts/*.md");
+allPosts = allPosts.sort(
+  (a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
+);
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
-<Layout title="test">
-	test
+
+<Layout>
+  <div
+    class="hero min-h-screen"
+    style="background-image: url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg);"
+  >
+    <div class="hero-overlay bg-opacity-60"></div>
+    <div class="hero-content text-center text-neutral-content">
+      <div class="max-w-md">
+        <h1 class="mb-5 text-5xl font-bold">Phire</h1>
+        <p class="mb-5">Vad är Phire text. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto soluta incidunt vero nemo doloribus dolores sint perferendis fuga earum aliquid laudantium inventore rerum sit quibusdam voluptas nam sequi, illum ullam?</p>
+        <button class="btn btn-primary">Get Started</button>
+      </div>
+    </div>
+  </div>
+  <div class="hero min-h-screen bg-base-200">
+    <div class="hero-content flex-col lg:flex-row-reverse">
+      <img
+        src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
+        class="max-w-sm rounded-lg shadow-2xl"
+      />
+      <div>
+        <h1 class="text-5xl font-bold">Eventemang</h1>
+        <p class="py-6">
+          Alla eventemang Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, non inventore. Officiis iste aspernatur quaerat ab inventore? Nulla facilis atque, repudiandae voluptas cupiditate at. Harum optio tempore omnis magnam assumenda.
+        </p>
+				<a href="/events">
+        <button class="btn btn-primary">Events</button>
+
+				</a>
+      </div>
+    </div>
+  </div>
+	<div class="hero min-h-screen bg-base-200">
+  <div class="hero-content flex-col lg:flex-row">
+    <img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" class="max-w-sm rounded-lg shadow-2xl" />
+    <div>
+      <h1 class="text-5xl font-bold">Träningar!</h1>
+      <p class="py-6">Vill du vara med i Phire? Här har vi de bokade lokalerna Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae modi cum, maiores architecto placeat minima ut illo eaque. Pariatur voluptate autem asperiores eaque tenetur porro accusantium doloremque reprehenderit voluptatibus adipisci.</p>
+      <button class="btn btn-primary">Träningar</button>
+    </div>
+  </div>
+</div>
 </Layout>

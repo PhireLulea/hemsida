@@ -9,5 +9,18 @@ export default {
   theme: {
     extend: {},
   },
+  daisyui: {
+    themes: [
+      {
+        phire: {
+          primary: "#fc5603",
+          secondary: "#ffab52",
+          accent: "#eb0f51",
+          neutral: "#3d4451",
+          "base-100": "#121212",
+        },
+      },
+    ],
+  },
   plugins: [require("daisyui")],
 } satisfies Config;
