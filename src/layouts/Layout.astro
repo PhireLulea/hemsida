@@ -12,12 +12,12 @@ const { title, lang } = Astro.props;
   </head>
   <body>
     <Navigation>
-      <main id="content" role="main">
-        <div class="overflow-hidden">
-          <slot />
-        </div>
-      </main>
     </Navigation>
+    <slot />
     <Footer site:visible />
   </body>
 </html>
+
+<script>
+  import "flowbite";
+</script>
