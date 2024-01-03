@@ -26,57 +26,62 @@ allPosts = allPosts.sort(
 ---
 
 <Layout>
-  <div
-    class="hero min-h-screen"
-    style="background-image: url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg);"
-  >
-    <div class="hero-overlay bg-opacity-60">Slideshow</div>
-    <div class="hero-content text-center text-neutral-content">
-      <div class="max-w-md">
-        <h1 class="mb-5 text-5xl font-bold">Phire</h1>
-        <p class="mb-5">
-          Vad är Phire text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, voluptatibus accusamus
-          dicta optio necessitatibus nemo in totam voluptates quo, nam rem laborum ratione. Quisquam, odit praesentium
-          alias quibusdam perferendis corporis.
-        </p>
-        <button class="btn btn-primary">Get Started</button>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+    <div id="animation-carousel" class="relative w-full row-start-2 md:row-start-auto" data-carousel="slide">
+      <!-- Carousel wrapper -->
+      <div class="relative h-screen overflow-hidden md:rounded-lg md:h-[32rem]">
+        <!-- Item 1 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img
+            src="https://picsum.photos/200/300"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="..."
+          />
+        </div>
+        <!-- Item 2 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img
+            src="https://picsum.photos/200/300.jpg"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="..."
+          />
+        </div>
+        <!-- Item 3 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+          <img
+            src="https://picsum.photos/200/600"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="..."
+          />
+        </div>
+        <!-- Item 4 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img
+            src="https://picsum.photos/200/700"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="..."
+          />
+        </div>
+        <!-- Item 5 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img
+            src="https://picsum.photos/200/400"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="..."
+          />
+        </div>
+      </div>
+
+      <!-- Slider indicators -->
+      <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+          <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
       </div>
     </div>
-  </div>
-  <div class="hero min-h-screen bg-secondary-300">
-    <div class="hero-content flex-col lg:flex-row-reverse">
-      <img
-        src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
-        class="max-w-sm rounded-lg shadow-2xl"
-      />
-      <div>
-        <h1 class="text-5xl font-bold">Eventemang</h1>
-        <p class="py-6">
-          Alla eventemang Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, non inventore. Officiis iste
-          aspernatur quaerat ab inventore? Nulla facilis atque, repudiandae voluptas cupiditate at. Harum optio tempore
-          omnis magnam assumenda.
-        </p>
-        <a href="/events">
-          <button class="btn btn-primary">Events</button>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="hero min-h-screen bg-base-200">
-    <div class="hero-content flex-col lg:flex-row">
-      <img
-        src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
-        class="max-w-sm rounded-lg shadow-2xl"
-      />
-      <div>
-        <h1 class="text-5xl font-bold">Träningar!</h1>
-        <p class="py-6">
-          Vill du vara med i Phire? Här har vi de bokade lokalerna Lorem ipsum, dolor sit amet consectetur adipisicing
-          elit. Vitae modi cum, maiores architecto placeat minima ut illo eaque. Pariatur voluptate autem asperiores
-          eaque tenetur porro accusantium doloremque reprehenderit voluptatibus adipisci.
-        </p>
-        <button class="btn btn-primary">Träningar</button>
-      </div>
-    </div>
+    <div class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sapiente doloremque quod magnam recusandae voluptatum aliquam? Quibusdam exercitationem totam reprehenderit eius unde magni odit. Pariatur iure exercitationem impedit temporibus nulla.</div>
   </div>
 </Layout>
