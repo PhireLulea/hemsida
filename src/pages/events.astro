@@ -6,26 +6,45 @@ import Booking from "../components/Booking.astro";
 <Layout title="Eventemang">
   <h1>Kommande eventemang</h1>
   <div class="flex flex-col">
-    <div class="flex-initial card card-side bg-base-100 shadow-xl m-4">
-      <figure><img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie" /></figure>
-      <div class="card-body">
-        <h2 class="card-title">New movie is released!</h2>
-        <p>Click the button to watch on Jetflix app.</p>
-        <div class="card-actions justify-end">
-          <button class="btn btn-primary">Watch</button>
-        </div>
+    <a
+      href="#"
+      class="flex flex-col items-center text-white bg-zinc-800 border border-gray-200 rounded-lg shadow md:flex-row hover:bg-zinc-700 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+    >
+      <img
+        class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+        src="/docs/images/blog/image-4.jpg"
+        alt=""
+      />
+      <div class="flex flex-col justify-between p-4 leading-normal">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-white-900 dark:text-white">
+          Noteworthy technology acquisitions 2021
+        </h5>
+        <p class="mb-3 font-normal text-white-700 dark:text-gray-400">
+          Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+        </p>
       </div>
-    </div>
-    <div class="flex-initial card card-side bg-base-100 shadow-xl m-4">
-      <figure><img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie" /></figure>
-      <div class="card-body">
-        <h2 class="card-title">New movie is released!</h2>
-        <p>Click the button to watch on Jetflix app.</p>
-        <div class="card-actions justify-end">
-          <button class="btn btn-primary">Watch</button>
-        </div>
+    </a>
+
+    <a
+      href="#"
+      class="flex flex-col items-center text-white bg-zinc-800 border border-gray-200 rounded-lg shadow md:flex-row hover:bg-zinc-700 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+    >
+      <img
+        class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+        src="/docs/images/blog/image-4.jpg"
+        alt=""
+      />
+      <div class="flex flex-col justify-between p-4 leading-normal">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-white-900 dark:text-white">
+          Noteworthy technology acquisitions 2021
+        </h5>
+        <p class="mb-3 font-normal text-white-700 dark:text-gray-400">
+          Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+        </p>
       </div>
-    </div>
+    </a>
+
   </div>
+  <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
   <Booking />
 </Layout>
